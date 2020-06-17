@@ -6,7 +6,7 @@ import org.springframework.stereotype.*;
 @Aspect
 @Component
 public class LogAspect {
-    @Pointcut(value = "execution(* Account.sayHello(..))")
+    @Pointcut(value = "@annotation(com.ford.griffin.logging.annotations.RaiseVictorOpsIncident)")
     private void logBefore() { }
 
     @Before("logBefore()")
